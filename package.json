@@ -1,0 +1,22 @@
+{
+  "name": "lifeos",
+  "productName": "LIFEOS",
+  "version": "1.0.0",
+  "description": "LIFEOS - personal life management app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win nsis portable"
+  },
+  "build": {
+    "appId": "com.lifeos.app",
+    "productName": "LIFEOS",
+    "files": ["main.js", "index.html", "icon.png", "icon.ico"],
+    "win": { "icon": "icon.ico", "target": ["nsis", "portable"] },
+    "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true, "createDesktopShortcut": true }
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  }
+}
